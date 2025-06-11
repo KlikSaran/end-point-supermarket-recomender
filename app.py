@@ -27,6 +27,10 @@ with open('models/content_based_model.pkl', 'rb') as f:
 
 cb_data = pd.read_csv('data/supermarket_encoded.csv')
 
+@app.route('/')
+def index():
+    return "<H1>Flask Endpoint Supermarket Recomender : online</H1>"
+
 def get_image_url(name):
     safe_name = name.replace(' ', '_').lower()
     return f"/images/{safe_name}.jpg"
@@ -161,6 +165,7 @@ def showTopProduct(count_items=10, user_id=None):
 
     except Exception as e:
         return jsonify({'error': str(e)}), 400
-
+    
+# === Run Server ===
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(port=5001)

@@ -1,0 +1,8 @@
+Flask==3.0.3
+joblib==1.4.2
+keras==3.10.0
+numpy==1.26.4
+pandas==2.3.0
+tensorflow==2.19.0
+flask-cors==6.0.0
+scikit-learn==1.5.2
